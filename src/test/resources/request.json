@@ -1,0 +1,117 @@
+{
+  "ruleSetId": "1",
+  "ruleName": "Test",
+  "effectiveDateStart": "1617793309",
+  "effectiveDateEnd": "1617793309",
+  "ruleType": "UI",
+  "status": true,
+  "description": "Test",
+  "listRule": [
+	{
+	  "order": 0,
+	  "itemCondition": [
+		{
+		  "items": [
+			{
+			  "type": "normal",
+			  "table": "Custommer",
+			  "field": "age",
+			  "condition": "",
+			  "tableIndex": 0,
+			  "left": "$Custommer.age",
+			  "operator": "",
+			  "right": ""
+			},
+			{
+			  "type": "normal",
+			  "table": "Custommer",
+			  "field": "age",
+			  "condition": "AND",
+			  "tableIndex": 0,
+			  "left": "$Custommer.age",
+			  "operator": "",
+			  "right": ""
+			},
+			{
+			  "items": [
+				{
+				  "type": "normal",
+				  "table": "Custommer",
+				  "field": "age",
+				  "condition": "AND",
+				  "tableIndex": 0,
+				  "left": "$Custommer.age",
+				  "operator": "",
+				  "right": ""
+				},
+				{
+				  "type": "normal",
+				  "table": "Custommer",
+				  "field": "age",
+				  "condition": "AND",
+				  "tableIndex": 0,
+				  "left": "$Custommer.age",
+				  "operator": "",
+				  "right": ""
+				}
+			  ],
+			  "type": "subquery",
+			  "condition": ""
+			}
+		  ],
+		  "condition": "AND"
+		},
+		{
+		  "items": [
+			{
+			  "type": "normal",
+			  "table": "Custommer",
+			  "field": "age",
+			  "condition": "",
+			  "tableIndex": 0,
+			  "left": "$Custommer.age",
+			  "operator": "",
+			  "right": ""
+			},
+			{
+			  "type": "normal",
+			  "table": "Custommer",
+			  "field": "age",
+			  "condition": "AND",
+			  "tableIndex": 0,
+			  "left": "$Custommer.age",
+			  "operator": "",
+			  "right": ""
+			}
+		  ],
+		  "condition": "AND"
+		}
+	  ],
+	  "action": {
+		"returnType": "String",
+		"value": "Test"
+	  },
+	  "dataModels": [
+		{
+		  "tableName": "Custommer",
+		  "attributes": [
+			{
+			  "id": 1,
+			  "name": "age",
+			  "dataType": "String"
+			}
+		  ]
+		}
+	  ]
+	},
+	{
+	  "order": 1,
+	  "itemCondition": [],
+	  "action": {
+		"returnType": "String",
+		"value": ""
+	  },
+	  "dataModels": []
+	}
+  ]
+}

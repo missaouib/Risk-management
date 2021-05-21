@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+FrondEnd -> RuleService++: PUT api /rule-management/v1/data-models/{data-model-id}/attribute/{attribute-id}
+RuleService --> RuleService++: Validate path variable and json body
+RuleService --> RuleService--: End validate
+RuleService -> RuleDB++: get data-model exist
+RuleService <-- RuleDB--: Return result
+RuleService -> RuleService++: validate attribute(duplicate name, exist)
+RuleService --> RuleService--: End validate
+RuleService -> RuleDB++: save attribute
+RuleService <-- RuleDB--: Return result
+FrondEnd <-- RuleService--: Return response
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+FrondEnd -> RuleService++: GET api /${application-short-name}/${version}/rule-set
+RuleService -> RuleDB++: get all rule set in database
+RuleService <-- RuleDB--: Return result
+FrondEnd <-- RuleService--: Return response
+@enduml

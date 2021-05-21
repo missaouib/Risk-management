@@ -1,0 +1,12 @@
+@startuml
+
+Client -> RuleService: POST api /rule-management/v1/business-rule
+RuleService -> RuleService: Validate path variable and json body
+RuleService -> RuleService: Extract data from json
+RuleService -> RuleService: Set data to entity
+database database as db
+RuleService -> db: Insert data to database
+db --> RuleService
+RuleService --> Client: Return result
+
+@enduml

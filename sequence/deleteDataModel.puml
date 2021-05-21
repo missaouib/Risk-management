@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+FrondEnd -> RuleService++: DELETE api /rule-management/v1/data-models/{data-model-id}
+RuleService --> RuleService++: Validate path variable
+RuleService --> RuleService--: End validate
+RuleService -> RuleDB++: Check data-model exist
+RuleService <-- RuleDB--: Return result
+RuleService -> RuleDB++: Update status of data-model to "DELETE"
+RuleService <-- RuleDB--: Return result
+FrondEnd <-- RuleService--: Return response
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+FrondEnd -> RuleService++: POST api /rule-management/v1/data-models/setting
+RuleService --> RuleService++: Validate path variable and json body
+RuleService --> RuleService--: End validate
+RuleService -> RuleService: Connect customer DB
+RuleService -> RuleService: Get list table
+RuleService -> RuleService: Get list table detail
+RuleService -> RuleService: create data table
+RuleService -> MongoDB: save data model
+MongoDB -> RuleService:  Return result
+FrondEnd <-- RuleService--: Return response
+
+@enduml
